@@ -1,12 +1,14 @@
 {
-    "name": "sprout-sprout",
+    "name": "<%- projectName %>",
     "version": "0.0.1",
-    "description": "My version of a sprout template to create sprout templates.",
-    "repository": "github:brennanfee/sprout-sprout",
-    "homepage": "https://github.com/brennanfee/sprout-sprout#readme",
-    "bugs": "https://github.com/brennanfee/sprout-sprout/issues",
-    "author": "Brennan Fee <github@todaytechsoft.biz> (https://github.com/brennanfee)",
-    "keywords": [ "sprout-template" ],
+    "description": "<%- projectDescription %>",
+    "repository": "<%- repository %>",
+    "homepage": "<%- repositoryHomepageUrl %>",
+    "bugs": "<%- repositoryBugsUrl %>",
+    "author": "<%- author %>",
+    "keywords": [
+        "sprout-template"
+    ],
     "devDependencies": {
         "eslint": "^4.19.1",
         "eslint-config-prettier": "^2.9.0",
@@ -20,8 +22,9 @@
         "gh-got": "^7.0.0",
         "underscore.string": "^3.3.4"
     },
+    "main": "init.js",
     "private": true,
-    "license": "Apache-2.0",
+    "license": "<%- license %>",
     "eslintConfig": {
         "env": {
             "node": true,
@@ -46,6 +49,6 @@
         "semi": false
     },
     "scripts": {
-        "test": "echo 'Error: no tests specified' && exit 1"
+        "test": "jest --coverage"
     }
 }
