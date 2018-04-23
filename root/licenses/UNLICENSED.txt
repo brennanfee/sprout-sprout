@@ -1,2 +1,0 @@
-Copyright © <%- year %> <%- author %>
-All rights reserved.
