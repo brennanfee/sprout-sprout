@@ -154,6 +154,9 @@ exports.after = function(utils, config) {
             return _writeLicenseFile(utils, config)
         })
         .then(() => {
+            return _writeOtherFiles(utils, config)
+        })
+        .then(() => {
             return _executeCommands(utils, config)
         })
 }
@@ -161,6 +164,12 @@ exports.after = function(utils, config) {
 function _writeLicenseFile(utils, config) {
     return utils.src.read(`licenses/${config.license}.txt`).then(content => {
         utils.target.write('LICENSE', content, config)
+    })
+}
+
+function _writeOtherFiles(utils, config) {
+    return utils.copy('files', 'root').then(() => {
+        return utils.copy('licenses', 'licenses')
     })
 }
 
