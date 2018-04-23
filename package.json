@@ -1,0 +1,17 @@
+{
+    "name": "sprout-sprout",
+    "version": "0.0.1",
+    "description": "My version of a sprout template to create sprout templates.",
+    "repository": "github:brennanfee/sprout-sprout",
+    "homepage": "https://github.com/brennanfee/sprout-sprout#readme",
+    "bugs": "https://github.com/brennanfee/sprout-sprout/issues",
+    "author": "Brennan Fee <github@todaytechsoft.biz> (https://github.com/brennanfee)",
+    "keywords": [],
+    "devDependencies": {},
+    "dependencies": {},
+    "private": true,
+    "license": "Apache-2.0",
+    "scripts": {
+        "test": "echo 'Error: no tests specified' && exit 1"
+    }
+}
