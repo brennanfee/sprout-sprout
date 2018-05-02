@@ -47,6 +47,14 @@ exports.before = function(utils) {
         })
 }
 
+function _stripPeriodIfNeeded(str) {
+    if (str && str.endsWith('.')) {
+        return str.substr(0, str.length - 1)
+    } else {
+        return str
+    }
+}
+
 exports.configure = [
     {
         name: 'projectName',
@@ -66,6 +74,7 @@ exports.configure = [
     {
         name: 'projectDescription',
         message: 'Project description:',
+        filter: _stripPeriodIfNeeded,
     },
     {
         name: 'authorName',
@@ -101,10 +110,8 @@ exports.configure = [
 ]
 
 exports.beforeRender = function(utils, config) {
-    if (config.projectDescription && !config.projectDescription.endsWith('.')) {
-        config.projectDescription += '.'
-    } else {
-        config.projectDescription = `${config.projectName}.`
+    if (!config.projectDescription) {
+        config.projectDescription = config.projectName
     }
 
     config.authorUrl = ''
