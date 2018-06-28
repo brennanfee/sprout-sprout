@@ -1,19 +1,30 @@
 {
-    "name": "<%- projectName %>",
-    "version": "0.0.1",
-    "description": "<%- projectDescription %>",
-    "repository": "<%- repository %>",
-    "homepage": "<%- repositoryHomepageUrl %>",
-    "bugs": "<%- repositoryBugsUrl %>",
-    "author": "<%- author %>",
-    "keywords": [],
-    "devDependencies": {},
-    "dependencies": {},
+  "name": "<%- projectName %>",
+  "version": "0.0.1",
+  "description": "<%- projectDescription %>",
+  "repository": "<%- repository %>",
+  "homepage": "<%- repositoryHomepageUrl %>",
+  "bugs": "<%- repositoryBugsUrl %>",
+  "author": "<%- author %>",
+  "keywords": [],
+  "devDependencies": {
+    "prettier": "^1.13.6"
+  },
+  "dependencies": {},
 <% if (license === 'UNLICENSED' || !isNpmPkg ) { %>
-    "private": true,
+  "private": true,
 <% } %>
-    "license": "<%- license %>",
-    "scripts": {
-        "test": "echo 'Error: no tests specified' && exit 1"
-    }
+  "license": "<%- license %>",
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "es5",
+    "proseWrap": "always",
+    "semi": false,
+    "singleQuote": true,
+    "requirePragma": false,
+    "insertPragma": false
+  },
+  "scripts": {
+    "test": "echo 'Error: no tests specified' && exit 1"
+  }
 }
