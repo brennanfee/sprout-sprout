@@ -43,6 +43,6 @@
     "insertPragma": false
   },
   "scripts": {
-    "test": "echo 'Error: no tests specified' && exit 1"
+    "test": "jest --coverage"
   }
 }
